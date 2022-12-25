@@ -1,7 +1,20 @@
+import NewMeetupForm from "../components/meetups/NewMeetupForm";
+
 function NewMeetupPage() {
+    function addMeetupHandler(meetupData) {
+      fetch('https://react-b6358-default-rtdb.asia-southeast1.firebasedatabase.app/meetups.json', {
+        method: 'POST',
+        body: JSON.stringify(meetupData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    }
+
     return (
       <section>
-        <h1>NewMeetupPage</h1>
+        <h1>Add New Meetup</h1>
+        <NewMeetupForm onAddMeetup={addMeetupHandler} />
       </section>
     );
   }
