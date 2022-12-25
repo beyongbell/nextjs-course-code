@@ -1,7 +1,7 @@
 function NewMeetupPage() {
     return (
       <section>
-        <h1>FavoritesPage</h1>
+        <h1>NewMeetupPage</h1>
       </section>
     );
   }
